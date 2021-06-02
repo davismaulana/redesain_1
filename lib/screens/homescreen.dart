@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:redesain_1/widgets/card.dart';
 import 'package:redesain_1/widgets/itemCard.dart';
-import 'package:redesain_1/widgets/secondscreen.dart';
+import 'secondscreen.dart';
 
 import '../constans.dart';
 
