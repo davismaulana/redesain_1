@@ -11,9 +11,9 @@ class ItemCard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           CardStyle(
-            img: 'assets/channel/aimer.jpg',
-            title: 'Aimer',
-            price: '1,4 million subscriber',
+            img: 'assets/hotels/hotel1.jpg',
+            title: 'Hotel Sunroute Plaza Sinjuku',
+            price: 'Rp.15 per hour',
           ),
 
           Container(
@@ -26,8 +26,8 @@ class ItemCard extends StatelessWidget {
           ),
 
           CardStyle(
-            img: 'assets/home/cewek.jpg',
-            title: 'Zenith Tennis Center',
+            img: 'assets/hotels/Makuhari.jpg',
+            title: 'APA Hotel Tokyo Bay Makuhari',
             price: "Rp.15 per hour",
           ),
 
@@ -41,8 +41,8 @@ class ItemCard extends StatelessWidget {
           ),
 
           CardStyle(
-            img: 'assets/home/cewek.jpg',
-            title: 'Zenith Tennis Center',
+            img: 'assets/hotels/shinagawa.jpg',
+            title: 'Shinagawa Prince Hotel',
             price: "Rp.15 per hour",
           ),
 
@@ -56,8 +56,8 @@ class ItemCard extends StatelessWidget {
           ),
 
           CardStyle(
-            img: 'assets/home/cewek.jpg',
-            title: 'Zenith Tennis Center',
+            img: 'assets/hotels/yokohama.jpg',
+            title: 'Yokohama Royal Park Hotel',
             price: "Rp.15 per hour",
           ),
 
@@ -70,11 +70,6 @@ class ItemCard extends StatelessWidget {
               ),
           ),
 
-          CardStyle(
-            img: 'assets/home/cewek.jpg',
-            title: 'Zenith Tennis Center',
-            price: "Rp.15 per hour",
-          ),
         ],
       ),
     );

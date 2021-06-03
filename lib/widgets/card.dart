@@ -24,25 +24,27 @@ class CardStyle extends StatelessWidget {
                 ),
             ),
           ),
-          Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  margin: EdgeInsets.only(left: 10),
-                  child: Text(
-                    title,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
+          Expanded(
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: Text(
+                      title,
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
+                    ),
                   ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 10),
-                  child: Text(
-                    price, 
-                    style: TextStyle(color: Colors.grey, fontSize: 14),
-                  ),
-                )
-              ],
+                  Container(
+                    margin: EdgeInsets.only(left: 10),
+                    child: Text(
+                      price, 
+                      style: TextStyle(color: Colors.grey, fontSize: 14),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ],

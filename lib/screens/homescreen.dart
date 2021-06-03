@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.yellow[600],
+        backgroundColor: Colors.orangeAccent,
         shape:RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0)
         ),
@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         },
         child: Center(
           child: Icon(
-            Icons.settings_input_component_rounded,
+            Icons.arrow_forward,
             color: Colors.white,
           ),
         ),
@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                     height: size.height * 0.40 - 27,
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage('assets/home/cewek.jpg'),
+                            image: AssetImage('assets/home/japan.jpg'),
                             fit: BoxFit.cover)),
                   ),
                   Positioned(

@@ -16,16 +16,16 @@ class members extends StatelessWidget {
             imgMembers: "assets/home/cewek.jpg",
           ),
           CardMembers(
-            imgMembers: "assets/home/cewek.jpg",
+            imgMembers: "assets/members/hinano.jpg",
           ),
           CardMembers(
-            imgMembers: "assets/home/cewek.jpg",
+            imgMembers: "assets/members/kato.jpg",
           ),
           CardMembers(
-            imgMembers: "assets/home/cewek.jpg",
+            imgMembers: "assets/members/rin.jpg",
           ),
           CardMembers(
-            imgMembers: "assets/home/cewek.jpg",
+            imgMembers: "assets/members/yui.jpg",
           ),
           
         ],

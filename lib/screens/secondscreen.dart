@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:redesain_1/widgets/button.dart';
 import 'package:redesain_1/widgets/members.dart';
 
+import 'homescreen.dart';
+
 class SecondScreen extends StatefulWidget {
   @override
   _SecondScreenState createState() => _SecondScreenState();
@@ -30,10 +32,17 @@ class _SecondScreenState extends State<SecondScreen> {
                     children: [
                       Container(
                         margin: EdgeInsets.fromLTRB(0, 10, 10, 0),
-                        child: Icon(
-                          Icons.cancel_outlined,
-                          size: 35,
-                          color: Colors.white,
+                        child: GestureDetector(
+                          child: Icon(
+                            Icons.cancel_outlined,
+                            size: 35,
+                            color: Colors.white,
+                          ),
+                          onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context)=>HomeScreen()
+                            ));
+                          },
                         ),
                       )
                     ],
@@ -49,7 +58,7 @@ class _SecondScreenState extends State<SecondScreen> {
                             border: Border.all(width: 2.0, color: Colors.black12),
                             borderRadius: BorderRadius.circular(8),
                             image: DecorationImage(
-                                image: AssetImage('assets/channel/aimer.jpg'),
+                                image: AssetImage('assets/hotels/shinagawa.jpg'),
                                 fit: BoxFit.cover),
                           ),
                         ),
@@ -60,7 +69,7 @@ class _SecondScreenState extends State<SecondScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Zenith Tennis Center',
+                                  'Shinagawa Prince Hotel',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 25,
@@ -127,13 +136,12 @@ class _SecondScreenState extends State<SecondScreen> {
                           width: 65,
                           margin: EdgeInsets.only(right: 10),
                           decoration: BoxDecoration(
+                            color: Colors.blue[100],
                             border: Border.all(width: 2.0, color: Colors.black12),
                             borderRadius: BorderRadius.circular(8),
-                            image:
-                              DecorationImage(
-                                image: AssetImage("assets/channel/aimer.jpg"),
-                                fit: BoxFit.cover
-                              ),
+                          ),
+                          child: Icon(
+                            Icons.calendar_today
                           ),
                         ),
                         Container(
@@ -180,34 +188,35 @@ class _SecondScreenState extends State<SecondScreen> {
                           width: 65,
                           margin: EdgeInsets.only(right: 10),
                           decoration: BoxDecoration(
+                            color: Colors.red[100],
                             border: Border.all(width: 2.0, color: Colors.black12),
                             borderRadius: BorderRadius.circular(8),
-                            image:
-                              DecorationImage(
-                                image: AssetImage("assets/channel/aimer.jpg"),
-                                fit: BoxFit.cover
-                              ),
+                          ),
+                          child: Icon(
+                            Icons.location_on
                           ),
                         ),
-                        Container(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 10),
-                                child: Text(
-                                  "Washington, DC",
-                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
+                        Expanded(
+                          child: Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.only(left: 10),
+                                  child: Text(
+                                    "Takanawa, Japan",
+                                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 19),
+                                  ),
                                 ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(left: 10),
-                                child: Text(
-                                  "129 Oakway Lane", 
-                                  style: TextStyle(color: Colors.grey, fontSize: 14),
-                                ),
-                              )
-                            ],
+                                Container(
+                                  margin: EdgeInsets.only(left: 10),
+                                  child: Text(
+                                    "08-8611 Tokyo-to, Minato-ku, Takanawa 4-10-30, Japan", 
+                                    style: TextStyle(color: Colors.grey, fontSize: 14),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ],
