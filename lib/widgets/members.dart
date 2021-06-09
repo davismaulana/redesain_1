@@ -13,9 +13,6 @@ class members extends StatelessWidget {
       child: Row(
         children: [
           CardMembers(
-            imgMembers: "assets/home/cewek.jpg",
-          ),
-          CardMembers(
             imgMembers: "assets/members/hinano.jpg",
           ),
           CardMembers(

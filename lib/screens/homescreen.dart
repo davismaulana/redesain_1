@@ -2,10 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:redesain_1/widgets/card.dart';
 import 'package:redesain_1/widgets/itemCard.dart';
 import 'secondscreen.dart';
-
 import '../constans.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key key}) : super(key: key);
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -13,9 +21,8 @@ class HomeScreen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.orangeAccent,
-        shape:RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0)
-        ),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         onPressed: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (Context) => SecondScreen()));
@@ -82,14 +89,19 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Container(
                     alignment: Alignment.centerLeft,
-                    margin: EdgeInsets.only(top: 20, left: 30, bottom: 30),
+                    margin: EdgeInsets.only(top: 20, left: 30, bottom: 10),
                     child: Text(
                       "Popular places",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
                     ),
                   ),
-                  ItemCard(),
+
+                  // LIST API
+
+                  Container(
+                    child: CardStyle(),
+                  )
                 ],
               ),
             ),

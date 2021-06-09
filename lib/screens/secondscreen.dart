@@ -5,6 +5,13 @@ import 'package:redesain_1/widgets/members.dart';
 import 'homescreen.dart';
 
 class SecondScreen extends StatefulWidget {
+
+  final avatar;
+  final fullname;
+  final email;
+
+  const SecondScreen({Key key, this.avatar, this.fullname, this.email}) : super(key: key);
+
   @override
   _SecondScreenState createState() => _SecondScreenState();
 }
@@ -58,18 +65,18 @@ class _SecondScreenState extends State<SecondScreen> {
                             border: Border.all(width: 2.0, color: Colors.black12),
                             borderRadius: BorderRadius.circular(8),
                             image: DecorationImage(
-                                image: AssetImage('assets/hotels/shinagawa.jpg'),
+                                image: NetworkImage('${widget.avatar}'.toString()),
                                 fit: BoxFit.cover),
                           ),
                         ),
                         Expanded(
                           child: Container(
-                            margin: EdgeInsets.fromLTRB(20, 15, 5, 0),
+                            margin: EdgeInsets.fromLTRB(20, 0, 1, 0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Shinagawa Prince Hotel',
+                                  '${widget.fullname}'.toString(),
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 25,
@@ -78,16 +85,8 @@ class _SecondScreenState extends State<SecondScreen> {
                                 Row(
                                   children: [
                                     Container(
-                                      margin: EdgeInsets.only(right: 5),
-                                      child: Icon(
-                                        Icons.star,
-                                        color: Colors.white,
-                                        size: 20,
-                                      ),
-                                    ),
-                                    Container(
                                       child: Text(
-                                        '4.8',
+                                        '${widget.email}',
                                         style: TextStyle(color: Colors.white),
                                       ),
                                     )
@@ -235,7 +234,37 @@ class _SecondScreenState extends State<SecondScreen> {
                     ),
                   ),
 
-                  members(),
+                  Row(
+                    children: [
+
+                      // Button add member
+
+                      Container(
+                        height: 45,
+                        width: 45,
+                        margin: EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 1.0, color: Colors.black12),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.black12
+                        ),
+                        child: GestureDetector(
+                          child: Icon(
+                            Icons.add,
+                            size: 35,
+                            color: Colors.white,
+                          ),
+                          onTap: (){
+                            
+                          },
+                        ),
+                      ),
+
+                      // Members list
+
+                      members()
+                    ],
+                  ),
 
                   ButtonSecondScreen(),
                 ],
